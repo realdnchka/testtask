@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFB00931</color>
+    <color name="colorPrimaryLight">#87e24b6e</color>
+    <color name="colorPrimaryDark">#FF590519</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorAccentTextIcon">#FFFFFFFF</color> <!-- Цвет контрастирующего текста (на фоне темных элементов) -->
+    <color name="colorPrimaryText">#FF212121</color> <!-- Цвет основного текста -->
+    <color name="colorSecondaryText">#FF727272</color> <!-- Цвет вспомогательного текста -->
+</resources>
