@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Point
 import android.graphics.drawable.Drawable
-import android.support.v4.content.ContextCompat
-import android.support.v4.graphics.drawable.DrawableCompat
 import android.util.TypedValue
 import android.view.WindowManager
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import com.noxx.testapplication.R
 import java.util.concurrent.atomic.AtomicInteger
 

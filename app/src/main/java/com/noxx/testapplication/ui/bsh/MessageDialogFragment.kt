@@ -1,9 +1,9 @@
 package com.noxx.testapplication.ui.bsh
 
 import android.os.Bundle
-import android.support.annotation.DrawableRes
-import android.support.v4.content.ContextCompat
 import android.view.View
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import com.noxx.testapplication.R
 import com.noxx.testapplication.eventbus.MessageDialogButtonEvent
 import com.noxx.testapplication.utils.DisplayUtils

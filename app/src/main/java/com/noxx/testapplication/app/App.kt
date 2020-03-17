@@ -6,7 +6,6 @@ import com.noxx.testapplication.eventbus.MkbEventBusIndex
 
 
 open class App : Application() {
-
     override fun onCreate() {
         EventBus.builder().addIndex(MkbEventBusIndex()).installDefaultEventBus()
         super.onCreate()

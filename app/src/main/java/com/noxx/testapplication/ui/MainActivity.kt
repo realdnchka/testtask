@@ -1,7 +1,7 @@
 package com.noxx.testapplication.ui
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.noxx.testapplication.R
 import com.noxx.testapplication.eventbus.MessageDialogButtonEvent
 import com.noxx.testapplication.ui.bsh.MessageDialogFragment
