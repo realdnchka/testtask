@@ -3,16 +3,16 @@ package com.noxx.testapplication
 import android.content.Context
 import android.content.Intent
 import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
+import com.noxx.testapplication.ui.MainActivity
 import junit.framework.Assert.assertEquals
 import org.hamcrest.Matchers.notNullValue
+import org.junit.*
 import org.junit.Assert.assertThat
-import org.junit.Before
-import org.junit.FixMethodOrder
-import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.MethodSorters
 
@@ -20,7 +20,6 @@ private const val BASIC_SAMPLE_PACKAGE = "com.noxx.testapplication"
 private const val LAUNCH_TIMEOUT = 5000L
 
 @RunWith(AndroidJUnit4::class)
-@LargeTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class ExampleInstrumentedTest {
     private val device: UiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
