@@ -4,20 +4,24 @@ import android.content.Context
 import android.content.Intent
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.*
 import junit.framework.Assert.assertEquals
 import org.hamcrest.Matchers.notNullValue
 import org.junit.Assert.assertThat
 import org.junit.Before
+import org.junit.FixMethodOrder
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.junit.runners.MethodSorters
 
 private const val BASIC_SAMPLE_PACKAGE = "com.noxx.testapplication"
 private const val LAUNCH_TIMEOUT = 5000L
-private const val STRING_TO_BE_TYPED = "UiAutomator"
 
 @RunWith(AndroidJUnit4::class)
+@LargeTest
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class ExampleInstrumentedTest {
     private val device: UiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
     private lateinit var loginActivity: LoginActivity
@@ -48,7 +52,7 @@ class ExampleInstrumentedTest {
     }
 
     @Test
-    fun loginWithoutPassword() {
+    fun loginAWithoutPassword() {
         loginActivity = LoginActivity(device)
 
         loginActivity.setLoginField()
@@ -56,9 +60,11 @@ class ExampleInstrumentedTest {
 
         val errorMessage = loginActivity.getErrorText()
         assertEquals("Необходимо ввести пароль", errorMessage)
+        loginActivity.clickErrorButton()
     }
+
     @Test
-    fun loginIncorrectPassword() {
+    fun loginBIncorrectPassword() {
         loginActivity = LoginActivity(device)
 
         loginActivity.setLoginField()
@@ -67,9 +73,11 @@ class ExampleInstrumentedTest {
 
         val errorMessage = loginActivity.getErrorText()
         assertEquals("Логин или пароль введен неверно", errorMessage)
+        loginActivity.clickErrorButton()
     }
+
     @Test
-    fun loginCorrect() {
+    fun loginCCorrect() {
         loginActivity = LoginActivity(device)
 
         loginActivity.setLoginField()
@@ -78,5 +86,6 @@ class ExampleInstrumentedTest {
 
         val errorMessage = loginActivity.getErrorText()
         assertEquals("Успешный вход в приложение", errorMessage)
+        loginActivity.clickErrorButton()
     }
 }
